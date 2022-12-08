@@ -76,11 +76,11 @@ app.post("/register/", async (req, res) => {
       res.status = 200;
       res.send("User created successfully");
     } else {
-      res.status = 400;
+      res.status(400);
       res.send("Password is too short");
     }
   } else {
-    res.status = 400;
+    res.status(400);
     res.send("User already exists");
   }
 });
